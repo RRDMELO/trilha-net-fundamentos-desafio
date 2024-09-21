@@ -21,7 +21,7 @@ namespace DesafioFundamentos.Models
         private string ValidarPlaca(string placa)
         {
             // Verifica se a placa está no formato correto (exemplo simples: 3 letras seguidas de 4 números)
-            if (!System.Text.RegularExpressions.Regex.IsMatch(placa, "^[A-Z]{3}[0-9]{4}$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(placa, "^[A-Za-z]{3}[0-9]{4}$"))
             {
                 return "Placa inválida. O formato correto é 3 letras seguidas de 4 números.";
             }
@@ -69,11 +69,9 @@ namespace DesafioFundamentos.Models
                 {
                     Console.WriteLine("Entrada inválida. Por favor, digite um número inteiro.");
                     return;
-                }           
+                }
 
-                int precoInicial = 12;
-                int valorHora = 3;
-                decimal valorTotal = precoInicial + (horasEstacionadas * valorHora);
+                decimal valorTotal = precoInicial + (horasEstacionadas * precoPorHora);
 
                 veiculos.Remove(placa);
                 Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
@@ -90,8 +88,7 @@ namespace DesafioFundamentos.Models
             if (veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
-                // *IMPLEMENTE AQUI*
+                veiculos.ForEach(veiculo => Console.WriteLine(veiculo));
             }
             else
             {

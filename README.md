@@ -21,7 +21,7 @@ A classe contém três variáveis, sendo:
 
 A classe contém três métodos, sendo:
 
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
+**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**. Este método também valida se a placa já existe na lista e se segue o padrão de 3 letras e 4 números.
 
 **RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
 
@@ -33,6 +33,16 @@ Por último, deverá ser feito um menu interativo com as seguintes ações imple
 3. Listar veículos
 4. Encerrar
 
+## Conceitos em C# Trabalhados
+Durante o desenvolvimento deste projeto, foram aplicados diversos conceitos fundamentais da linguagem C#, incluindo:
+
+* **Variáveis:** Utilizadas para armazenar dados, como `precoInicial`, `precoPorHora` e a lista de `veiculos`.
+* **Loops de Repetição:** Estruturas como `for` e `foreach` foram usadas para iterar sobre coleções e executar blocos de código repetidamente.
+* **Condicionais:** Instruções `if` e `else` foram empregadas para tomar decisões com base em condições específicas.
+* **Operadores Lógicos e de Atribuição:** Operadores como `==,` `!=`, `&&`, `||`, `=`, `+=` foram usados para comparar valores e atribuir resultados.
+* **Classes**: A classe `Estacionamento` foi criada para encapsular dados e métodos relacionados ao gerenciamento do estacionamento.
+* **Funções**: Métodos como `AdicionarVeiculo`, `RemoverVeiculo` e `ListarVeiculos` foram implementados para realizar operações específicas.
+* **Arrays/List**: A lista `veiculos` foi utilizada para armazenar as placas dos veículos estacionados e manipular esses dados de forma eficiente.
 
 ## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+O código foi concluído com sucesso, obedecendo as regras descritas acima, resultando em um programa funcional. Todas as funções foram implementadas, incluindo a validação de placas para garantir que não haja duplicatas e que sigam o padrão de 3 letras e 4 números.
